@@ -1,0 +1,32 @@
+/* cobre a tela inteira e não atrapalha cliques */
+.light-pillar-container {
+  position: fixed;      /* <- era absolute */
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+
+  pointer-events: none;
+  z-index: 0;
+
+  /* ajuda MUITO o brilho aparecer */
+  mix-blend-mode: screen;
+}
+
+/* fallback também cobrindo a tela */
+.light-pillar-fallback {
+  position: fixed;      /* <- era absolute */
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+  z-index: 0;
+
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #888;
+  font-size: 14px;
+}
